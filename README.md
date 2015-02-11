@@ -22,6 +22,16 @@ cd docker-hazelcast-map-store-cassandra
 ./rebuild.sh
 ```
 
+## Running Hazelcast Node
+```
+./start-hazelcast.sh
+```
+or
+```
+docker run -d -p 5701:5701 --name hazelcast1 -e "GROUP_NAME=test-group" -e "CASSANDRA_HOST=172.17.42.1" -e "GROUP_PASS=test" fferreira/hazelcast
+```
+
+
 ## Running Multi Nodes of Hazelcast
 ```
 ./start-hazelcast-multi-nodes.sh
